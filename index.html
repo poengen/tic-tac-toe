@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <style>
+      body { text-align: center; padding: 150px; }
+      h1 { font-size: 50px; }
+      body { font: 20px Helvetica, sans-serif; color: #333; }
+      article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+      a { color: #dc8100; text-decoration: none; }
+      a:hover { color: #333; text-decoration: none; }
+    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hjemmeside xoxo</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      ReactDOM.render(
+        <h1>Hello, Tic!</h1>,
+        document.getElementById('root')
+      );
+
+    </script>
+    <div id="like_button_container"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="like_button.js"></script>
+  </body>
+</html>
