@@ -23,5 +23,17 @@
 		"production": [ ">0.2%", "not dead", "not op_mini all" ],
 		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
 	},
-	"homepage": "https://poengen.github.io/tic-tac-toe"
+	"homepage": "https://poengen.github.io/tic-tac-toe",
+	"description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+	"main": "./src/index.js",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/poengen/tic-tac-toe.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/poengen/tic-tac-toe/issues"
+	}
 }
