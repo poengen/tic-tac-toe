@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { nextId, useId } from 'react-id-generator';
 
 function Square(props) {
 	return (
-		<button className="square" onClick={props.onClick}>
+		<button className="square" onClick={props.onClick} id={props.id}>
 			{props.value}
 		</button>
 	);
@@ -12,10 +13,12 @@ function Square(props) {
 
 class Board extends React.Component {
 	renderSquare(i) {
-		return <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
+		const idString = 'test-id-square-' + i.toString();
+		return <Square id={idString} value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
 	}
 
 	render() {
+		console.log(1);
 		return (
 			<div>
 				<div className="board-row">
@@ -37,10 +40,15 @@ class Board extends React.Component {
 		);
 	}
 }
-
+/*
+function getIdList(props) {
+	return useId(10, 'test-id-moves-');
+}
+*/
 class Game extends React.Component {
 	constructor(props) {
 		super(props);
+		// const idListTmp = getIdList();
 		this.state = {
 			history: [
 				{
@@ -48,7 +56,8 @@ class Game extends React.Component {
 				}
 			],
 			stepNumber: 0,
-			xIsNext: true
+			xIsNext: true,
+			idList: [ 'id0', 'id1', 'id2', 'id3', 'id4', 'id5', 'id6', 'id7', 'id8', 'id9' ] // this.getIdList()
 		};
 	}
 
@@ -88,7 +97,9 @@ class Game extends React.Component {
 			const desc = move ? 'Go to move #' + move : 'Go to game start';
 			return (
 				<li key={move}>
-					<button onClick={() => this.jumpTo(move)}>{desc}</button>
+					<button id={this.state.idList[move]} onClick={() => this.jumpTo(move)}>
+						{desc}
+					</button>
 				</li>
 			);
 		});
@@ -105,7 +116,7 @@ class Game extends React.Component {
 					<Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
 				</div>
 				<div className="game-info">
-					<div>{status}</div>
+					<div id="test-id-status-1">{status}</div>
 					<ol>{moves}</ol>
 				</div>
 			</div>

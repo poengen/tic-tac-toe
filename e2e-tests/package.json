@@ -1,0 +1,16 @@
+{
+	"name": "e2e-tests",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"tictactoe": "codeceptjs run ./scripts/tic-tac-toe_test.js --steps",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"codeceptjs": "^2.3.0",
+		"puppeteer": "^1.19.0"
+	}
+}
