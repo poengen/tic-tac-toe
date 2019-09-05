@@ -26,9 +26,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      #- run: yarn install
       - run: cd e2e-tests && yarn install
-      - run: yarn start
+      #- run: yarn start
 
       - save_cache:
           paths:

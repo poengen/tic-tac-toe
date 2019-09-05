@@ -3,9 +3,9 @@ exports.config = {
 	output: './output',
 	helpers: {
 		Puppeteer: {
-			// url: 'http://poengen.github.io',
-			url: 'http://localhost:3000',
-			show: true
+			url: 'http://poengen.github.io/tictactoe',
+			//url: 'http://localhost:3000',
+			//show: true
 		}
 	},
 	include: {
