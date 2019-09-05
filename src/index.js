@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { nextId, useId } from 'react-id-generator';
 
 function Square(props) {
 	return (
@@ -40,15 +39,10 @@ class Board extends React.Component {
 		);
 	}
 }
-/*
-function getIdList(props) {
-	return useId(10, 'test-id-moves-');
-}
-*/
+
 class Game extends React.Component {
 	constructor(props) {
 		super(props);
-		// const idListTmp = getIdList();
 		this.state = {
 			history: [
 				{
@@ -57,7 +51,7 @@ class Game extends React.Component {
 			],
 			stepNumber: 0,
 			xIsNext: true,
-			idList: [ 'id0', 'id1', 'id2', 'id3', 'id4', 'id5', 'id6', 'id7', 'id8', 'id9' ] // this.getIdList()
+			idList: [ 'id0', 'id1', 'id2', 'id3', 'id4', 'id5', 'id6', 'id7', 'id8', 'id9' ]
 		};
 	}
 
